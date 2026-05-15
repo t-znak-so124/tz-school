@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>ТВЕРДЫЙ ЗНАК | Частный клуб для подростков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Заявка принята! 🎉</h3>
+        <p>
+          Спасибо за доверие! Наш куратор свяжется с вами в ближайшее время для
+          уточнения деталей и назначения собеседования.
+        </p>
+        <button class="modal-btn" onclick="closeModal()">Отлично, жду!</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="container">
+      <div class="hero-full">
+        <img class="hero-bg" src="hero.jpg" alt="VZLET CLUB" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge-wrapper">
+            <div class="hero-badge">ЧАСТНЫЙ КЛУБ</div>
+            <div class="hero-badge-secondary">9-11 классы</div>
+          </div>
+          <h1>
+            АЛЬТЕРНАТИВНОЕ <br /><span>ОБУЧЕНИЕ</span><br />В СТАРШЕЙ ШКОЛЕ
+          </h1>
+
+          <div class="hero-parent-message">
+            <p>
+              <strong>Индивидуальное сопровождение подростка</strong
+              ><br /><br />
+              на этапе перехода от школы к взрослой жизни: экзамены, выбор
+              профессии, формирование самостоятельности, дисциплины, внутренней
+              опоры и стратегии будущего.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ОСНОВНАЯ СЕКЦИЯ (5 карточек в стиле BENTO GRID) -->
+    <section class="main-section">
+      <div class="section-container">
+        <div class="opportunities-list-full">
+          <div class="opp-item-full hidden">
+            <div class="opp-icon-full"><i class="fas fa-handshake"></i></div>
+            <h3 class="opp-title-full">Наставник, который</h3>
+            <p class="opp-text-full">
+              поможет сформировать полезные привычки, найдет ключи к внутренней
+              мотивации и научит эффективно распоряжаться своим временем
+            </p>
+          </div>
+          <div class="opp-item-full hidden">
+            <div class="opp-icon-full"><i class="fas fa-users"></i></div>
+            <h3 class="opp-title-full">Камерное сообщество</h3>
+            <p class="opp-text-full">
+              сильных подростков, ориентированных на успешное будущее
+            </p>
+          </div>
+          <div class="opp-item-full hidden">
+            <div class="opp-icon-full">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3 class="opp-title-full">Интеграция в выбранный ВУЗ</h3>
+            <p class="opp-text-full">
+              уже в 11 классе с помощью индивидуальной дорожной карты
+            </p>
+          </div>
+          <div class="opp-item-full hidden">
+            <div class="opp-icon-full">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="opp-title-full">Подготовка к экзаменам</h3>
+            <p class="opp-text-full">не только академически, но и морально</p>
+          </div>
+          <div class="opp-item-full hidden">
+            <div class="opp-icon-full"><i class="fas fa-calendar-alt"></i></div>
+            <h3 class="opp-title-full">
+              Комфортное освоение образовательной программы
+            </h3>
+            <p class="opp-text-full">с индивидуальным расписанием занятий</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- КАК ПОДРОСТКУ СТАТЬ УЧАСТНИКОМ КЛУБА -->
+      <div class="join-section">
+        <div class="join-card">
+          <div class="join-header">
+            <div class="join-line"></div>
+            <div class="join-dot"></div>
+            <h2>КАК ПОДРОСТКУ СТАТЬ УЧАСТНИКОМ КЛУБА</h2>
+            <div class="join-dot"></div>
+            <div class="join-line"></div>
+          </div>
+          <div class="join-steps">
+            <div class="join-step hidden">
+              <div class="join-step-icon-wrapper">
+                <div class="join-step-icon"><i class="fas fa-pen-alt"></i></div>
+                <div class="join-step-number">01</div>
+              </div>
+              <h3 class="join-step-title">Оставить заявку</h3>
+              <p class="join-step-desc">
+                Заполните форму на сайте — это первый шаг к поступлению
+              </p>
+            </div>
+            <div class="join-step hidden">
+              <div class="join-step-icon-wrapper">
+                <div class="join-step-icon"><i class="fas fa-brain"></i></div>
+                <div class="join-step-number">02</div>
+              </div>
+              <h3 class="join-step-title">Пройти тестирование</h3>
+              <p class="join-step-desc">
+                Академическое и психологическое тестирование для определения
+                уровня
+              </p>
+            </div>
+            <div class="join-step hidden">
+              <div class="join-step-icon-wrapper">
+                <div class="join-step-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="join-step-number">03</div>
+              </div>
+              <h3 class="join-step-title">Собеседование с наставником</h3>
+              <p class="join-step-desc">
+                Финальное собеседование для знакомства и формирования дорожной
+                карты
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- НОВЫЙ БЛОК: ПЕРСОНАЛЬНОЕ СОПРОВОЖДЕНИЕ ПОДРОСТКА (наставник как проводник) -->
+      <div class="personal-card-wrapper">
+        <div class="personal-card">
+          <div class="personal-header">
+            <div class="personal-line"></div>
+            <div class="personal-dot"></div>
+            <h2>ПЕРСОНАЛЬНОЕ СОПРОВОЖДЕНИЕ ПОДРОСТКА</h2>
+            <div class="personal-dot"></div>
+            <div class="personal-line"></div>
+          </div>
+
+          <div class="journey-container">
+            <!-- ЛЕВАЯ ТОЧКА: растерянный школьник -->
+            <div class="journey-point">
+              <div class="journey-image">
+                <img src="confused-boy.jpg" alt="Растерянный школьник" />
+              </div>
+              <p class="journey-label">Растерянный школьник</p>
+              <p class="journey-desc">испытывает страх перед экзаменами</p>
+            </div>
+
+            <!-- ПУТЬ СО СТРЕЛКОЙ И НАСТАВНИКОМ НАД НЕЙ -->
+            <div class="journey-path">
+              <!-- Наставник над стрелкой -->
+              <div class="journey-mentor">
+                <div class="journey-mentor-icon">
+                  <i class="fas fa-chalkboard-user"></i>
+                </div>
+                <div class="journey-mentor-text">
+                  <strong>Взрослый наставник</strong>
+                  <span>сопровождает на каждом этапе</span>
+                </div>
+              </div>
+              <!-- Стрелка -->
+              <div class="journey-arrow">
+                <svg viewBox="0 0 60 30" width="60" height="30">
+                  <line
+                    x1="0"
+                    y1="15"
+                    x2="50"
+                    y2="15"
+                    stroke="#d4a65a"
+                    stroke-width="2"
+                  />
+                  <polygon points="50,10 60,15 50,20" fill="#d4a65a" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- ПРАВАЯ ТОЧКА: успешный студент -->
+            <div class="journey-point">
+              <div class="journey-image">
+                <img src="successful-boy.jpg" alt="Успешный студент" />
+              </div>
+              <p class="journey-label">Мотивированный студент</p>
+              <p class="journey-desc">
+                с понятными целями и выбранной профессией
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ФОРМА ЗАЯВКИ -->
+      <div class="form-premium" id="form">
+        <h2 style="font-size: 2rem; margin-bottom: 10px">ОСТАВИТЬ ЗАЯВКУ</h2>
+        <p style="color: #b8ad99">
+          Заполните форму, и мы свяжемся с вами для собеседования
+        </p>
+        <div class="form-grid">
+          <div class="form-info">
+            <h3 style="margin-bottom: 20px; color: #b8ad99">
+              <i class="fas fa-star-of-life" style="color: #d4a65a"></i>
+              Осталось мест:
+            </h3>
+
+            <!-- Два счетчика мест -->
+            <div class="spots-container">
+              <div class="spots-card">
+                <div class="spots-number">4</div>
+                <div class="spots-label">места</div>
+                <div class="spots-class">в 9 класс</div>
+              </div>
+              <div class="spots-card">
+                <div class="spots-number">3</div>
+                <div class="spots-label">места</div>
+                <div class="spots-class">в 11 класс</div>
+              </div>
+            </div>
+          </div>
+          <form id="applicationForm" class="form-fields">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> ФИО родителя *</label
+              ><input
+                type="text"
+                id="parentName"
+                name="parent_name"
+                placeholder="Иванова Елена Сергеевна"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-child"></i> Имя ребенка *</label
+              ><input
+                type="text"
+                id="childName"
+                name="child_name"
+                placeholder="Александр"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-graduation-cap"></i> Класс *</label
+              ><select
+                id="classNumber"
+                name="class"
+                required
+                style="color: #6c6c6c"
+              >
+                <option value="">Выберите класс</option>
+                <option value="9">9 класс</option>
+                <option value="11">11 класс</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-phone"></i> Телефон *</label
+              ><input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+7 (999) 123-45-67"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane" style="margin-right: 8px"></i>
+              ОТПРАВИТЬ ЗАЯВКУ
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="info-bottom">
+        <div class="info-card">
+          <i class="fas fa-lightbulb" style="color: #d4a65a"></i>
+          <strong>Обучение со смыслом без формальных дисциплин</strong>
+          <p>
+            Учим понимать, зачем учиться, находить интерес и развивать
+            критическое мышление.
+          </p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-users" style="color: #d4a65a"></i>
+          <strong>Сильное окружение сверстников, помогающее расти</strong>
+          <p>Единомышленники, поддержка и совместный рост.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-map-marked-alt" style="color: #d4a65a"></i>
+          <strong>Индивидуальная дорожная карта</strong>
+          <p>
+            Персональный план развития с учётом целей, интересов и выбранного
+            направления.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <div class="logo-mark">Ъ</div>
+              <span>ТВЕРДЫЙ ЗНАК</span>
+              <p class="footer-subtitle">Частный клуб для подростков</p>
+            </div>
+            <div class="footer-contacts">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+79135602600">+7 913 560 26 00</a>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <p>
+              © Частный клуб для учеников 9 и 11 классов на Взлётке —
+              образование и осознанный выбор будущего.
+            </p>
+            <p>
+              Аттестат государственного образца. Индивидуальная дорожная карта в
+              ВУЗ.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showModal() {
+        const modal = document.getElementById("successModal");
+        modal.classList.add("show-modal");
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal() {
+        const modal = document.getElementById("successModal");
+        modal.classList.remove("show-modal");
+        document.body.style.overflow = "";
+      }
+      window.onclick = function (event) {
+        const modal = document.getElementById("successModal");
+        if (event.target === modal) closeModal();
+      };
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".opp-item-full, .benefit-card, .join-step")
+        .forEach((el) => {
+          el.classList.add("hidden");
+          observer.observe(el);
+        });
+      emailjs.init("KGGpHj0EI0t7-qaQp");
+      const SERVICE_ID = "service_1wikn0k";
+      const TEMPLATE_ID = "template_z8k7l7r";
+      const form = document.getElementById("applicationForm");
+      if (form) {
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const parentName = document.getElementById("parentName").value.trim();
+          const childName = document.getElementById("childName").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const classNumber = document.getElementById("classNumber").value;
+          if (!parentName || !childName || !phone || !classNumber) {
+            alert("Пожалуйста, заполните все поля формы.");
+            return;
+          }
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+          submitBtn.disabled = true;
+          try {
+            const templateParams = {
+              parent_name: parentName,
+              child_name: childName,
+              phone: phone,
+              class: classNumber,
+            };
+            const response = await emailjs.send(
+              SERVICE_ID,
+              TEMPLATE_ID,
+              templateParams,
+            );
+            if (response.status === 200) {
+              showModal();
+              form.reset();
+            } else {
+              throw new Error("Ошибка отправки");
+            }
+          } catch (error) {
+            console.error("EmailJS Error:", error);
+            alert(
+              "❌ Ошибка отправки. Пожалуйста, свяжитесь с нами по телефону.",
+            );
+          } finally {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
