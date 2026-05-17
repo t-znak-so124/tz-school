@@ -424,12 +424,11 @@
             } else {
               throw new Error("Ошибка отправки");
             }
-          } catch (error) {
-            console.error("EmailJS Error:", error);
-            alert(
-              "❌ Ошибка отправки. Пожалуйста, свяжитесь с нами по телефону.",
-            );
-          } finally {
+          } catch(error) {
+    console.error("EmailJS Error Details:", error);
+    // Показываем пользователю понятное сообщение
+    alert("❌ Ошибка отправки. Проверьте интернет-соединение.\n\nДетали: " + (error.text || error.message));
+} finally {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
           }
