@@ -386,54 +386,52 @@
           el.classList.add("hidden");
           observer.observe(el);
         });
-      emailjs.init("KGGpHj0EI0t7-qaQp");
-      const SERVICE_ID = "service_1wikn0k";
-      const TEMPLATE_ID = "template_z8k7l7r";
+      emailjs.init("Qgf_eMTOeS9IAVjQR");
+      const SERVICE_ID = "service_k29sjsq";
+      const TEMPLATE_ID = "template_t8tt1y1";
       const form = document.getElementById("applicationForm");
-      if (form) {
-        form.addEventListener("submit", async function (e) {
-          e.preventDefault();
-          const parentName = document.getElementById("parentName").value.trim();
-          const childName = document.getElementById("childName").value.trim();
-          const phone = document.getElementById("phone").value.trim();
-          const classNumber = document.getElementById("classNumber").value;
-          if (!parentName || !childName || !phone || !classNumber) {
-            alert("Пожалуйста, заполните все поля формы.");
-            return;
-          }
-          const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn.innerHTML;
-          submitBtn.innerHTML =
-            '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
-          submitBtn.disabled = true;
-          try {
-            const templateParams = {
-              parent_name: parentName,
-              child_name: childName,
-              phone: phone,
-              class: classNumber,
-            };
-            const response = await emailjs.send(
-              SERVICE_ID,
-              TEMPLATE_ID,
-              templateParams,
-            );
-            if (response.status === 200) {
-              showModal();
-              form.reset();
-            } else {
-              throw new Error("Ошибка отправки");
-            }
-          } catch(error) {
-    console.error("EmailJS Error Details:", error);
-    // Показываем пользователю понятное сообщение
-    alert("❌ Ошибка отправки. Проверьте интернет-соединение.\n\nДетали: " + (error.text || error.message));
-} finally {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          }
-        });
+     if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const parentName = document.getElementById("parentName").value.trim();
+    const childName = document.getElementById("childName").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const classNumber = document.getElementById("classNumber").value;
+
+    if (!parentName || !childName || !phone || !classNumber) {
+      alert("Пожалуйста, заполните все поля формы.");
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+    submitBtn.disabled = true;
+
+    try {
+      const templateParams = {
+        parent_name: parentName,
+        child_name: childName,
+        phone: phone,
+        class: classNumber,
+      };
+      const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+      if (response.status === 200) {
+        showModal();
+        form.reset();
+      } else {
+        throw new Error("Ошибка отправки");
       }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("❌ Ошибка отправки. Пожалуйста, свяжитесь с нами по телефону.");
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
     </script>
   </body>
 </html>
